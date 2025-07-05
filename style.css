@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+   background: url('arrmétéo.png') no-repeat center center fixed  ;
+    background-size: cover;
+    height: 100vh;
+    opacity:0.7 rgb(37, 37, 37);
+}
+.Météo{
+ display: flex;
+ margin-bottom: 20px;
+ padding-left: 550px;
+ padding-top: 50px;
+ font-size: 50px;
+ color: hwb(0 0% 100%);
+ opacity: none;
+ 
+} 
+
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+   
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px;
+    margin-left: 200px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+#search-btn {
+    padding: 12px ;
+    margin-left: 10px;
+    background-color: #5151e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#search-btn:hover {
+    background-color: #3a3ac7;
+}
+
+.weather-container {
+    text-align: center;
+     
+}
+.city-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2a5c8a;
+}
+.country {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.range{
+     background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    margin-left: 400px;
+}
+.details {
+    text-align: left;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    margin-left: 400px;
+    margin-bottom: 20px;
+}
+.location #city-name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.location #country {
+    font-size: 16px;
+    color: #666;
+}
+
+.weather-info {
+    margin-top: 20px;
+     
+}
+
+.temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#hourly-forecast{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperature #temp {
+    font-size: 48px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.temperature #weather-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.details #description {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}

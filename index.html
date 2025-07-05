@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Météo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <h1 class="Météo">Météo</h1>
+    <div class="app-container">
+        <div class="search-container">
+            <input type="search" id="city-input" placeholder="Entrez une ville...">
+            <button id="search-btn">Rechercher</button>
+        </div>
+        
+        <div class="weather-container">
+            <section class="range"> 
+            <div class="location">
+                <h1 id="city-name">--</h1>
+                <p id="country">--</p>
+            </div>
+            
+            <div class="weather-info">
+                <div class="temperature">
+                    <img id="weather-icon" src="" alt="Weather Icon" >
+                    <p id="temp">--°C</p>
+                </div>
+                <div class="hours-container" id="hourly-forecast">
+                     
+                </div>
+                <div class="days-container" id="daily-forecast">
+                    
+                </div>
+            </section>    
+             
+                <div class="details">
+                    <p id="description">--</p>
+                    <hr>
+                    <p>
+                        <i class="fas fa-tint humidity-icon"></i>
+                        Humidité: <span id="humidity">--</span>%</p>
+                        <hr>
+                    <p>
+                         <i class="fas fa-wind wind-icon"></i>
+                        Vent: <span id="wind">--</span> km/h</p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>  
+<!-- 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Météo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">Météo</h1>
+    <div class="app-container">
+        <div class="search-container">
+            <input type="search" id="city-input" placeholder="Entrez une ville...">
+            <button id="search-btn">Rechercher</button>
+        </div>
+        
+        <div class="weather-container">
+            <div class="current-weather">
+                <div class="location">
+                    <h1 id="city-name">--</h1>
+                    <p id="country">--</p>
+                </div>
+                
+                <div class="weather-info">
+                    <div class="temperature">
+                        <img id="weather-icon" src="" alt="Weather Icon">
+                        <p id="temp">--°C</p>
+                        
+                    </div>
+                    <div class="hours-container" id="hourly-forecast">
+                     
+                </div>
+                <div class="days-container" id="daily-forecast">
+                    
+                </div>
+                    
+                    <div class="details">
+                        <p id="description">--</p>
+                        <p>Humidité: <span id="humidity">--</span>%</p>
+                        <p>Vent: <span id="wind">--</span> km/h</p>
+                    </div>
+                </div>
+            </div>
+
+            
+
+    <script src="script.js"></script>
+</body>
+</html>
+-->
