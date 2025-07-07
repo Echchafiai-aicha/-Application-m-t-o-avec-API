@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+ <!--<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -6,13 +6,14 @@
     <title>Application Météo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="Météo">Météo</h1>
+    <h1 class="Météo">Météo</h1> 
     <div class="app-container">
         <div class="search-container">
-            <input type="search" id="city-input" placeholder="Entrez une ville...">
-            <button id="search-btn">Rechercher</button>
+            <input    id="city-input" placeholder="Entrez une ville..."   type="text" >
+            <button id="search-btn"><i class="fas fa-search"></i></button>
         </div>
         
         <div class="weather-container">
@@ -53,24 +54,25 @@
 
     <script src="script.js"></script>
 </body>
-</html>  
-<!-- 
-<!DOCTYPE html>
+</html>  -->
+
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Application Météo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1 class="title">Météo</h1>
+    <h1 class="app-title">Météo</h1> 
     <div class="app-container">
         <div class="search-container">
-            <input type="search" id="city-input" placeholder="Entrez une ville...">
-            <button id="search-btn">Rechercher</button>
+            <input id="city-input" placeholder="Entrez une ville..." type="text">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
         </div>
-        
+       <section  class="range"> 
         <div class="weather-container">
             <div class="current-weather">
                 <div class="location">
@@ -82,26 +84,36 @@
                     <div class="temperature">
                         <img id="weather-icon" src="" alt="Weather Icon">
                         <p id="temp">--°C</p>
-                        
+                         
                     </div>
-                    <div class="hours-container" id="hourly-forecast">
-                     
-                </div>
-                <div class="days-container" id="daily-forecast">
-                    
-                </div>
-                    
-                    <div class="details">
-                        <p id="description">--</p>
-                        <p>Humidité: <span id="humidity">--</span>%</p>
-                        <p>Vent: <span id="wind">--</span> km/h</p>
-                    </div>
+                    <p id="description">--</p>
                 </div>
             </div>
 
-            
+            <div class="forecast-container">
+                <h2>Prévisions horaires</h2>
+                <div class="hours-container" id="hourly-forecast"></div>
+                
+                <h2>Prévisions sur 5 jours</h2>
+                <div class="days-container" id="daily-forecast"></div>
+            </div>
+        </section>     
+            <div class="details">
+                <div class="details-grid">
+                    <p><i class="fas fa-tint"></i> Humidité: <span id="humidity">--</span>%</p>
+                    <p><i class="fas fa-wind"></i> Vent: <span id="wind">--</span> km/h</p>
+                    <p><i class="fas fa-tachometer-alt"></i> Pression: <span id="pressure">--</span> hPa</p>
+                    <p><i class="fas fa-eye"></i> Visibilité: <span id="visibility">--</span> km</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader hidden">
+        <div class="spinner"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>
 </html>
--->
+
