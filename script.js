@@ -5,7 +5,6 @@ let isCelsius = true;
 const elements = {
     cityInput: document.getElementById('city-input'),
     searchBtn: document.getElementById('search-btn'),
-    locationBtn: document.getElementById('location-btn'),
     unitToggle: document.getElementById('unit-toggle'),
     cityName: document.getElementById('city-name'),
     country: document.getElementById('country'),
@@ -56,29 +55,8 @@ async function getWeatherData(city) {
         hideLoader();
     }
 }
-
-// Fonction pour récupérer par coordonnées
-async function getWeatherByCoords(lat, lon) {
-    showLoader();
-    try {
-        const [currentResponse, forecastResponse] = await Promise.all([
-            fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&lang=fr&appid=${apiKey}`),
-            fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=fr&appid=${apiKey}`)
-        ]);
-
-        const currentData = await currentResponse.json();
-        const forecastData = await forecastResponse.json();
-
-        displayWeatherData(currentData);
-        displayHourlyForecast(forecastData.list.slice(0, 8));
-        displayDailyForecast(forecastData.list);
-    } catch (error) {
-        alert('Erreur lors de la récupération des données');
-        console.error(error);
-    } finally {
-        hideLoader();
-    }
-}
+ 
+ 
 
 // Afficher les données météo
 function displayWeatherData(data) {
@@ -149,7 +127,7 @@ function displayDailyForecast(dailyData) {
     });
 }
 
-// Basculer entre °C et °F
+ 
 function toggleTemperatureUnit() {
     isCelsius = !isCelsius;
     const currentTemp = elements.temp.textContent;
@@ -157,9 +135,7 @@ function toggleTemperatureUnit() {
     
     if (isCelsius) {
         elements.temp.textContent = `${Math.round((tempValue - 32) * 5/9)}°C`;
-    } else {
-        elements.temp.textContent = `${Math.round(tempValue * 9/5 + 32)}°F`;
-    }
+    }  
 }
 
 // Événements
@@ -181,19 +157,7 @@ elements.cityInput.addEventListener('keypress', (e) => {
     }
 });
 
-elements.locationBtn.addEventListener('click', () => {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const { latitude, longitude } = position.coords;
-                getWeatherByCoords(latitude, longitude);
-            },
-            (error) => alert('Impossible d\'obtenir votre localisation.')
-        );
-    } else {
-        alert('La géolocalisation n\'est pas supportée par votre navigateur.');
-    }
-});
+ 
 
 elements.unitToggle.addEventListener('click', toggleTemperatureUnit);
 
